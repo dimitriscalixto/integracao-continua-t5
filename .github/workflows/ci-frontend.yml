@@ -32,3 +32,6 @@ jobs:
       - name: Teste
         working-directory: sgcmapp/
         run: ng test --browsers=ChromeHeadless --no-watch
+      - name: Teste E2E
+        working-directory: sgcmapp/
+        run: ng run sgcmapp:cypress-run
