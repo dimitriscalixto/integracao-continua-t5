@@ -4,6 +4,7 @@ on:
   workflow_dispatch:
 
 jobs:
+
   ci:
     name: CI Workflow Main
     uses: ./.github/workflows/ci-frontend.yml
@@ -14,8 +15,7 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
       - name: Deploy
-        uses: johnbeynon/render-deploy-action@master
+        uses: johnbeynon/render-deploy-action@v0.0.8
         with:
           service-id: ${{ secrets.RENDER_SERVICE_ID_FRONT }}
           api-key: ${{ secrets.RENDER_API_KEY }}
-          wait-for-success: true
