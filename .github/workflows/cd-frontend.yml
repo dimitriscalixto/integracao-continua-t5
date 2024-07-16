@@ -4,6 +4,9 @@ on:
   workflow_dispatch:
 
 jobs:
+  ci:
+    name: CI Workflow Main FrontEnd
+    uses: ./.github/workflows/ci-frontend.yml
   deploy:
     runs-on: ubuntu-latest
     steps:
